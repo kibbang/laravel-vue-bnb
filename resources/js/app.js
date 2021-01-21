@@ -1,18 +1,17 @@
-require('./bootstrap');
+require("./bootstrap");
 
-import VueRouter from 'vue-router';
-import router from './routes';
-import index from './index'
+import VueRouter from "vue-router";
+import router from "./routes";
+import index from "./index";
 
-window.Vue = require('vue');
+window.Vue = require("vue");
 
 Vue.use(VueRouter);
 
-
 const app = new Vue({
-    el: '#app',
+    el: "#app",
     router,
     components: {
-        'index': index
+        index: index
     }
 });
