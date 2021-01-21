@@ -1,6 +1,6 @@
 import VueRouter from "vue-router";
 import Bookables from "./bookables/Bookables";
-import secondComponent from "./components/Example2";
+import Bookable from "./bookable/Bookable";
 
 const routes = [
     {
@@ -10,9 +10,9 @@ const routes = [
     },
 
     {
-        path: "/sec",
-        name: "sec",
-        component: secondComponent
+        path: "/bookable/:id",
+        name: "bookable",
+        component: Bookable
     }
 ];
 
