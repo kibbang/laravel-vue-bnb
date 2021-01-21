@@ -1,24 +1,24 @@
-import VueRouter from "vue-router"
-import ExampleComponent from "./components/ExampleComponent"
-import secondComponent from "./components/Example2"
+import VueRouter from "vue-router";
+import Bookables from "./bookables/Bookables";
+import secondComponent from "./components/Example2";
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: ExampleComponent
-  },
+    {
+        path: "/",
+        name: "home",
+        component: Bookables
+    },
 
-  {
-    path: '/sec',
-    name: 'sec',
-    component: secondComponent
-  }
-]
+    {
+        path: "/sec",
+        name: "sec",
+        component: secondComponent
+    }
+];
 
 const router = new VueRouter({
-  mode: 'history',
-  routes
-})
+    mode: "history",
+    routes
+});
 
-export default router
+export default router;
