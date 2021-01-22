@@ -67,6 +67,10 @@ export default {
     };
   },
 
+  props: {
+    bookableId: String,
+  },
+
   computed: {
     hasErrors() {
       return 422 === this.status && this.errors !== null;
@@ -88,7 +92,7 @@ export default {
 
       axios
         .get(
-          `/api/bookables/${this.$route.params.id}/availability?from=${this.from}&to=${this.to}`
+          `/api/bookables/${this.bookableId}/availability?from=${this.from}&to=${this.to}`
         )
         .then((response) => {
           this.status = response.status;
